@@ -50,12 +50,20 @@ def add(note):
 
 # edit selected note
 def edit(note_name, note_to_add):
-    pass
+    f = open(note_name, 'w')
+    f.write(note_to_add)
+    f.close()
+    print(f'Edited note {note_name}')  # need to fix to allow for different files
+    # pass
 
 
 # create a new note within current category
 def create_note(note_name, note_to_add):
-    pass
+    f = open(note_name, 'x')
+    f.write(note_to_add)
+    f.close()
+    print(f'Created note {note_name}')  # need to fix to allow for different files
+    # pass
 
 
 # create new category of notes
@@ -83,6 +91,10 @@ def clear_notes():
     # make sure to prompt with yes/no
     pass
 
+
+def forget_note():
+    # delete specific note
+    pass
 
 # main function
 def cli():
